@@ -12,6 +12,11 @@ let stock = [
   { id: 3, name: 'Produto C', quantity: 50, price: 25.00 }
 ];
 
+// Rota inicial para verificar o status do servidor
+app.get('/', (req, res) => {
+  res.send('Olá, mundo! O back-end do sistema Agmax está no ar!');
+});
+
 // Rota para listar todos os produtos em estoque
 app.get('/stock', (req, res) => {
   res.status(200).json(stock);
