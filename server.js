@@ -26,8 +26,5 @@ app.post("/clientes", (req, res) => {
   res.status(201).json(novoCliente);
 });
 
-// Inicia o servidor (local)
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
+// Exporta o app para o Firebase App Hosting
+module.exports = app;
